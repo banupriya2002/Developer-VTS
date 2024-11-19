@@ -1,0 +1,289 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #20eb3e; /* Green Background */
+    color: black; /* Black text color */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #20eb3e; /* Black background for the nav */
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: white; /* Yellow hover color */
+    transform: scale(1.1); /* Hover scale effect */
+}
+
+/* Section Styling */
+section {
+    padding: 3rem 1rem;
+    margin: 2rem 0;
+    background-color: white; /* White background for sections */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.02); /* Slight zoom effect when hovering on sections */
+}
+
+/* Title Styling */
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: black; /* Green text color */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+/* Text Alignment */
+.align-text {
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+.image-gallery img{
+    width: 30%;
+}
+
+.course-img {
+    width: 48%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.course-img:hover {
+    transform: scale(1.05); /* Zoom effect on image hover */
+    opacity: 0.8; /* Fade effect on hover */
+}
+
+/* Course Section */
+.course-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.course-module {
+    background-color:rgb(93, 226, 93);
+    padding: 1.5rem;
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-module img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.course-module:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover shadow effect */
+}
+
+.course-module:hover img {
+    transform: scale(1.1); /* Zoom effect on image hover */
+}
+
+.course-module h3 {
+    color:black;
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Skills Section */
+#skills .skills-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background-color:rgb(93, 226, 93);
+    padding: 2rem;
+    width: 30%;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-10px); /* Hover lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover shadow */
+}
+
+.skill h3 {
+    color: #2f8e3d;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+}
+
+.skill p {
+    text-align: center;
+}
+
+.skill:hover h3 {
+    color: #ffcc00; /* Yellow color on hover */
+}
+
+/* Technical Modules Section */
+#technical .module-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.module {
+    background-color: rgb(93, 226, 93);
+    padding: 1.5rem;
+    width: 30%;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.module:hover {
+    transform: translateY(-10px); /* Hover lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover shadow */
+}
+
+.module img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.module:hover img {
+    transform: scale(1.1); /* Zoom effect on image hover */
+}
+
+.module h3 {
+    color: #2f8e3d;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Key Features Section */
+#features .features-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background-color:rgb(93, 226, 93);
+    padding: 1.5rem;
+    width: 30%;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px); /* Hover lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover shadow */
+}
+
+.feature img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover img {
+    transform: scale(1.1); /* Zoom effect on image hover */
+}
+
+.feature h3 {
+    color: #2f8e3d;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Certification Section */
+#certification .certification-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.certificate-img {
+    width: 20%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.certificate-img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+    opacity: 0.8; /* Fade effect on hover */
+}
+
+/* Footer Section */
+footer {
+    background-color: rgb(93, 226, 93); /* Black footer */
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+footer p {
+    font-size: 1.3rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffcc00; /* Yellow hover color */
+    text-decoration: underline;
+}

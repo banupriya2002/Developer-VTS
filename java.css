@@ -1,0 +1,474 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: linear-gradient(to right, #1E2A47, #FFD700);
+}
+
+/* Navigation Bar */
+.nav {
+    background-color: #1E2A47; /* Blue background */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    list-style: none;
+    margin: 0;
+    align-items: center;
+}
+
+.nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #FFD700; /* Yellow logo */
+    transition: color 0.3s ease;
+}
+
+.nav-items li {
+    margin: 0 15px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.nav-items a:hover {
+    color: #FFD700; /* Hover effect to yellow */
+}
+
+#resbar {
+    display: none; /* Hidden for now, add for mobile responsiveness */
+}
+
+/* About Section */
+.about {
+    background: linear-gradient(to right, #1E2A47, #FFD700); /* Blue to Yellow gradient */
+    color: white;
+    padding: 100px 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.about .lower {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding: 0 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.about .info {
+    flex: 1;
+    padding: 20px;
+    transition: transform 0.4s ease;
+}
+
+.about .info h1 {
+    font-size: 2.5em;
+    color: #FFD700; /* Yellow color for heading */
+    margin-bottom: 20px;
+    transition: color 0.4s ease;
+}
+
+.about .info p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.about .slider {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.about .slider img {
+    max-width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* AOS Animations */
+[data-aos="fade-in"] {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+[data-aos="fade-in"].aos-animate {
+    opacity: 1;
+}
+
+[data-aos="slide-up"] {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+[data-aos="slide-up"].aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+[data-aos="zoom-in"] {
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+[data-aos="zoom-in"].aos-animate {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Hover effects */
+.about .lower:hover {
+    transform: translateY(-10px);
+}
+
+.about .info:hover {
+    transform: translateX(10px);
+}
+
+.about .slider:hover {
+    transform: translateX(-10px);
+}
+
+
+
+/* General Styles for the Skills Section */
+.skills {
+    background-color: #101c38;
+    padding: 50px 0;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Heading Styles */
+.skills header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white; /* Blue color */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Animated Text */
+.animated-text {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ffcc00; /* Yellow color */
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Content Styles */
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Skill Card Styles */
+.skill-card {
+    background-color: #ecd23d;
+    /* background-color: #ffffff; */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px); /* Hover effect to move the card up */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Image inside Skill Card */
+.skill-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-image {
+    transform: scale(1.1); /* Image zoom effect on hover */
+}
+
+/* Skill Card Title */
+.skill-card h3 {
+    font-size: 1.8rem;
+    color: #003366; /* Blue color */
+    margin: 15px 0;
+}
+
+/* Skill Card Description */
+.skill-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Animation for Text */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design: Adjust for smaller screens */
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skills header h1 {
+        font-size: 2rem;
+    }
+
+    .animated-text {
+        font-size: 1.2rem;
+    }
+
+    .skill-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .skills header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+
+
+.header {
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Module section styles */
+.modules {
+    padding: 50px 10%;
+    background-color: #101c38;
+    color: rgb(196, 196, 43);
+}
+
+.modules h1 {
+    font-size: 36px;
+    color:rgb(196, 196, 43);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Module section individual module styling */
+.module {
+    background-color: rgb(196, 196, 43);
+    color: black;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.module:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.module h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.module p {
+    font-size: 16px;
+}
+
+.module ul {
+    padding-left: 20px;
+}
+
+.module ul li {
+    font-size: 16px;
+}
+
+/* Features Section */
+.features {
+    background-color: #101c38;
+    padding: 50px 10%;
+    text-align: center;
+}
+.features h1 {
+    font-size: 36px;
+    color: #FFD700;
+    margin-bottom: 30px;
+}
+
+/* Feature item */
+.feature-item {
+    background-color: #26345a;
+    color: #FFD700;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.feature-item h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 16px;
+}
+
+.feature-image {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.feature-item.fade-in .feature-image {
+    animation: fadeIn 1.5s ease-out;
+}
+
+.feature-item.slide-up .feature-image {
+    animation: slideUp 1.5s ease-out;
+}
+
+.feature-item.zoom-in .feature-image {
+    animation: zoomIn 1.5s ease-out;
+}
+
+.feature-item.bounce .feature-image {
+    animation: bounce 1.5s ease-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Certification Section */
+.certi {
+    background-color:#101c38;
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.certi h1 {
+    font-size: 36px;
+    color: yellow;
+    margin-bottom: 30px;
+}
+
+.certi p {
+    font-size: 18px;
+    color:yellow;
+    margin-bottom: 30px;
+}
+
+.certification-info h2 {
+    font-size: 28px;
+    color:yellow;
+    margin-bottom: 20px;
+}
+
+.certification-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.certification-info ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #101c38;
+    color: #FFD700;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 16px;
+}
